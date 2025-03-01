@@ -55,6 +55,9 @@ Discuss the potential data science ethics issues (privacy, fairness, accuracy, a
 ### Privacy:
 The data collection and storage of personal, sensitive or confidential data should be properly handled to ensure there is no data leakage. One method would be to anonymize or aggregate the data such that the data cannot be tied back to any individual. Which we have seen in our case, where there is no PII data. 
 
+During the data collection process, users should have a clear understanding of what is collected and how the data will be used, as well as the potential risks before consenting to the data collection.
+
+As a rule of thumb, only relevant data should be collected, no more than necessary and kept no longer than needed. Data retention longer than required may pose privacy risks.
 
 ### Fairnesss:
 
