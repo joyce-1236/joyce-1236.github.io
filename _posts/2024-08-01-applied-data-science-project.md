@@ -5,16 +5,22 @@ title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
 ## Project Background
-Provide an overview of your team's project business goals and objectives and state the objective that you are working on. 
+An overview of the project business goals and objectives. 
 
-Background:
+### Background:
+
 IJJ Pte Ltd is a medium-sized bank headquartered in Singapore, serving a diverse clientele ranging from individual customers to small and medium enterprises (SMEs). As a growing financial institution, the bank aims to strengthen its market position by leveraging technology and data-driven strategies/insights.
 
-Problem Statement
+### Problem Statement:
+
 IJJ Pte Ltd struggles to attract high-value customers, optimize marketing efforts, and address customer complaints, impacting customer loyalty and business growth.
 
-Business Goal
+### Business Goal:
+
 To enhance customer retention, improve marketing strategies, and effectively resolve customer complaints for better satisfaction and brand loyalty.
+
+### Objective:
+Enhance marketing performance: Implement proven marketing strategies to improve customer engagement (measured by whether a customer has signed up for term deposit in this case).
 
 ## Work Accomplished
 Document your work done to accomplish the outcome
