@@ -148,4 +148,4 @@ There should be transparency in where the data is coming from and what biases ex
 Clear documentation and communication about how decisions are made by models are required for high-stake areas like criminal justice or lending are essential to build trust.
 
 ## Source Codes and Datasets
-Upload your model files and dataset into a GitHub repo and add the link here. 
+https://github.com/joyce-1236/ITD214_files
