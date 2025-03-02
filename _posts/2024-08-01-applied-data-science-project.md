@@ -1,12 +1,10 @@
 ---
 layout: post
-author: Name
+author: Joyce
 title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
 ## Project Background
-An overview of the project business goals and objectives. 
-
 ### Background:
 
 IJJ Pte Ltd is a medium-sized bank headquartered in Singapore, serving a diverse clientele ranging from individual customers to small and medium enterprises (SMEs). As a growing financial institution, the bank aims to strengthen its market position by leveraging technology and data-driven strategies/insights.
@@ -36,6 +34,31 @@ Original dataset:
 
 Cleaned dataset:
 ![image](https://github.com/user-attachments/assets/4e7f4e6e-4503-4f29-8688-bb48ff4dd9bc)
+
+Data exploration:
+Dataset has no missing values.
+Non-null count for all columns is 45211, same as total count.
+![image](https://github.com/user-attachments/assets/78a8e5c3-16cf-474b-bf1c-e9c6cb9fdcb4)
+
+Duration column:
+- meaning: last contact duration, in seconds
+- used box plot to see the distribution
+- from here can see there is a number of outliers (at the top)
+![image](https://github.com/user-attachments/assets/68e0eb77-5ef8-45a1-a45f-1c6dd71ad6a4)
+
+Cleaning and removing outliers:
+Since the number of outliers are small compared to total dataset, hence removed the rows.
+![image](https://github.com/user-attachments/assets/63bea31b-7e6c-4a82-ad35-13fd88b1bf55)
+![image](https://github.com/user-attachments/assets/c768198c-b512-4db3-a8b7-16812d7a2c6e)
+
+Balance column:
+- Column that indicates the average yearly balance
+- Negative values is highly unlikely (unless overdraft), we will remove these values first.
+![image](https://github.com/user-attachments/assets/dd3063f9-4bdb-40ed-9837-a3a396724da4)
+
+
+
+
 
 
 ### Modelling
