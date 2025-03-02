@@ -56,21 +56,64 @@ Balance column:
 - Negative values is highly unlikely (unless overdraft), we will remove these values first.
 ![image](https://github.com/user-attachments/assets/dd3063f9-4bdb-40ed-9837-a3a396724da4)
 
+Age column:
+- Maximum and minimum age seems reasonable, 95 and 18 respectively. Hence no need to remove outliers.
+- Next is to group them into 10’s for better analysis.
+- Created new column age_group.
 
+![image](https://github.com/user-attachments/assets/d6265c2b-aa4e-47c8-a371-0b7346e579a8)
+![image](https://github.com/user-attachments/assets/ea56dd48-9ef6-4cbd-a916-6c579362b45e)
+![image](https://github.com/user-attachments/assets/a7ce654e-40d2-4542-ad34-4d9da3e8972c)
 
+Some values called "unknowns" in various columns (job, poutcome, contact, education), replaced them with the most frequent value.
+![image](https://github.com/user-attachments/assets/c7b61ca1-bf69-467f-ac3c-67c3f6332e2b)
 
+Target variable y (has the customer subscribed to term deposit? yes/no)
 
+Convert it to 1 and 0:
+![image](https://github.com/user-attachments/assets/d5143221-1270-457c-9ec3-11e5c3ab288b)
+
+Apply binary encoding for columns with binary categorical values
+![image](https://github.com/user-attachments/assets/15a2976b-973b-4cc6-8537-a3db1da0d930)
+
+Apply one-hot encoding for columns with categorical variables
+![image](https://github.com/user-attachments/assets/2ba42978-6980-4a73-8b9a-cb975d0e5ab1)
+
+Apply standardization for columns with continuous variables
+![image](https://github.com/user-attachments/assets/6e80f5d7-9bd7-4c55-8cc8-13c25bcd2085)
 
 ### Modelling
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+
+Selection of logistic regression as it is the simplest model.
+
+Split the data into training and testing sets.
+![image](https://github.com/user-attachments/assets/ffd4c7ab-f773-4e99-9ee0-ef7ac5c76551)
+
+Build and train logistic regression model using sklearn
+![image](https://github.com/user-attachments/assets/774384d6-7968-42a2-9a54-40fb07ed00fd)
+![image](https://github.com/user-attachments/assets/d4ef9967-a4f9-4bf8-a575-980650c79e41)
 
 ### Evaluation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+Model is overall 90% accurate.
+The model is performing well with class 0, achieving high precision (0.91), recall (0.97), and F1-score (0.94).
+However, the model struggles with class 1, where precision is 0.65, recall is 0.34, and the F1-score is 0.44. This suggests the model is not capturing enough of the positive cases (1s) and is making a significant number of false negatives (725).
+Might be imbalance, use over/ under sampling
+
+![image](https://github.com/user-attachments/assets/86a6f41d-f7f9-4001-b5b4-35b09bf6e259)
+![image](https://github.com/user-attachments/assets/92cdc90b-4a9d-4229-a54a-c3f9012e7d85)
+![image](https://github.com/user-attachments/assets/d006713c-a969-4835-bc54-76ce3e3dec38)
+
+![image](https://github.com/user-attachments/assets/71f32ab5-7f07-400c-b465-586683632098)
+![image](https://github.com/user-attachments/assets/9c0f6d0c-3342-4ffe-aa76-a0ffddeeba9d)
+![image](https://github.com/user-attachments/assets/22d1839c-f41a-49cf-9727-49654448c691)
+
 
 ## Recommendation and Analysis
-Explain the analysis and recommendations
+![image](https://github.com/user-attachments/assets/61c1bf26-7a15-459b-b7d5-918e024ed64b)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+### Suggested marketing campaign: 
+### More calls for longer duration in the month of march to get higher engagement rates.
+![image](https://github.com/user-attachments/assets/647a2651-ac62-4636-bde6-1e3b6c9b3d48)
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
