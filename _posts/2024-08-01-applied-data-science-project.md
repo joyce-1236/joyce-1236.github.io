@@ -61,14 +61,25 @@ As a rule of thumb, only relevant data should be collected, no more than necessa
 
 ### Fairnesss:
 
+Ensure the model is not biased, which may potentially disadvantage certain groups . For example, in Amazon where their model for recruitment was discrimatory against females. In the current model, ensure there is balanced dataset across different jobs (management, technician, entrepreneur, blue-collar), and marital status (single, married, divorced) to ensure differnt demographics are represented fairly in the model.
+
 ### Accuracy:
+
+Data quality is essential to obtain good and accurate insights. Low-quality, incomplete or noisy data can lead to inaccurate predictions. The data pre-processing step is essential, for example, removing outliers and null values. 
+
+Model accuracy vs interpretability should be considered. Models can be highly accurate but difficult to interpret and hard to understand how decisions are made which can lead to a lack of trust or accountability in the results. 
 
 ### Accountability:
 
+For models which have high risk and high unpredictability, there should be human in the loop. There should also be clear responsiblility assignment for model decisions and ensure that errors are rectified quickly.
+
 ### Transparency:
 
+Complex "black box" models such as deep learning makes it hard to see how the model arrive at specific decision. This lack of transparency can undermine trust and make it difficult for stakeholders to understand or challenge the results. 
 
+There should be transparency in where the data is coming from and what biases exists in the data anad how it has been processed.
 
+Clear documentation and communication about how decisions are made by models are required for high-stake areas like criminal justice or lending are essential to build trust.
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
